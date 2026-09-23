@@ -25,6 +25,8 @@ The repository includes the following files and directories:
 - `Bilayer_graphene_eval_ensemble.ini`: Reference evaluation configuration
 - `tools/`: Utility scripts for generating OpenMX input files, running/post-processing Hamiltonian calculations, evaluating prediction errors, and plotting analysis results
 - `models/`: Trained ensemble model artifacts and associated run metadata
+- `models/config/`: The four saved training configurations, their model-to-seed mapping, and source-file checksums
+- `doc/`: Three workflow notebooks, real example data, dependency requirements, and training-geometry analysis instructions
 
 ### Core File Descriptions
 
@@ -60,4 +62,41 @@ This project is built upon [DeepH-E3](https://github.com/Xiaoxun-Gong/DeepH-E3.g
 
 ## Reproducible Notebooks
 
-The [doc directory](doc/README.md) contains Jupyter notebooks for model training and evaluation, data analysis including band calculations, and individual result figures using real archived data. The four saved training configurations are also collected in [models/config](models/config/README.md).
+The [doc directory](doc/README.md) provides three notebooks. Run them in the following order:
+
+| Notebook | Contents |
+| --- | --- |
+| [01: Model training and evaluation](doc/01_training_and_evaluation.ipynb) | Prepare local configurations and invoke the existing DeepH-E3 training and ensemble-evaluation entry points. |
+| [02: Data analysis and band calculations](doc/02_data_analysis_and_bands.ipynb) | Calculate MAE, MSE and ensemble disagreement, compare the results with archived statistics, and run `tools/sparse_calc.py` for DFT-reference and ensemble-mean Hamiltonians. |
+| [03: Result visualization](doc/03_result_visualization.ipynb) | Generate six structural-sweep figures and one band comparison with the existing plotting scripts. Figures are saved individually, without composite-figure assembly. |
+
+From the repository root, install the notebook dependencies and launch JupyterLab:
+
+```bash
+python -m pip install -r doc/requirements.txt
+python -m jupyterlab doc
+```
+
+The error-analysis, band-calculation and plotting examples run on a CPU using the included real archived data. These inputs include predictions and DFT labels for three structures, their ensemble standard-deviation files, six structural-sweep tables, and matching Hamiltonians, overlap matrices and structural metadata for a band-calculation example. Sources, units and checksums are documented in [doc/data](doc/data/README.md).
+
+The notebooks have been executed with their default settings. The recomputed error statistics agree with the archived results, and the band example generates 16 bands at 45 k-points for each of the DFT-reference and ensemble-mean Hamiltonians. Full model training and inference require the DeepH-E3 environment and preprocessed dataset; their execution switches are disabled by default. Set the local paths and switches in notebook 01 to run those steps.
+
+Generated configurations, analysis tables, band files, logs and figures are written to `doc/output/`, which is ignored by Git. For model checkpoints, use Git LFS and run `git lfs pull` after cloning.
+
+## Saved Training Configurations
+
+The original saved training configurations have been collected as [model-1.ini](models/config/model-1.ini), [model-2.ini](models/config/model-2.ini), [model-3.ini](models/config/model-3.ini), and [model-4.ini](models/config/model-4.ini). They are unchanged copies of the files stored with the four model runs.
+
+The [configuration README](models/config/README.md) describes the initialization seeds, input ordering and shared settings. The [manifest](models/config/manifest.json) records the original file locations and SHA-256 checksums. Notebook 01 prepares working copies with local paths for reproduction.
+
+## Training-Set Geometry Analysis
+
+[tools/analyze_training_geometry.py](tools/analyze_training_geometry.py) reproduces the C–C bond-length and local perpendicular interlayer-spacing analysis. Its plotting functions are provided in [tools/training_geometry_style.py](tools/training_geometry_style.py).
+
+After installing the notebook dependencies above, run the following command from the repository root:
+
+```bash
+python tools/analyze_training_geometry.py
+```
+
+The script uses the included coordinate/lattice extract and seed-42 manifest in `doc/data/training_geometry/` to analyze the 300 bilayer-graphene structures and their 180/60/60 training/validation/test split. This manifest records the frozen split used for the geometry analysis. Outputs include per-structure statistics, distribution summaries and joint-domain figures under `doc/output/training_geometry/`, with figures in its `figures/` subdirectory. See the [geometry-analysis instructions](doc/training_geometry.md) for input definitions, optional arguments and output descriptions.
