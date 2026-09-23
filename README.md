@@ -57,3 +57,7 @@ This project is built upon [DeepH-E3](https://github.com/Xiaoxun-Gong/DeepH-E3.g
 ## Important Note
 
 **Complex tensor operations are currently not supported.** Scenarios involving complex tensors, such as Hamiltonian matrices with spin-orbit coupling (SOC) effects, are beyond the scope of this work.
+
+## Reproducible Notebooks
+
+The [doc directory](doc/README.md) contains Jupyter notebooks for model training and evaluation, data analysis including band calculations, and individual result figures using real archived data. The four saved training configurations are also collected in [models/config](models/config/README.md).

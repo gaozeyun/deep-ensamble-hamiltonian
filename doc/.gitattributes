@@ -1,0 +1,3 @@
+# Preserve archived data bytes and recognize original CRLF line endings.
+data/** -text whitespace=cr-at-eol
+data/**/*.h5 -filter -diff -merge -text

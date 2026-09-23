@@ -1,0 +1,56 @@
+{
+  "structure_id": "t-4-0",
+  "description": "Matching DFT and ensemble-mean Hamiltonians, overlap matrices and structural metadata from the archived bilayer strain sweep. The archived band configuration supplies the existing Gamma-M-K-Gamma path and solver settings; its Fermi energy equals this structure metadata.",
+  "files": [
+    {
+      "file": "hamiltonians.h5",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/hamiltonians.h5",
+      "sha256": "faf7f9b1fb5620205011cbba1de2010f94b6e7ee07536711571cc37799b0bbfc"
+    },
+    {
+      "file": "overlaps.h5",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/overlaps.h5",
+      "sha256": "bded4ce0d9d5a85c5ac31885154276e86b33d13813e7286d72ed218464364fe0"
+    },
+    {
+      "file": "info.json",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/info.json",
+      "sha256": "51cdbeda3d9bd717cc230d9057825bc1c2c5d77c1313fcdc2c1657a210083bfd"
+    },
+    {
+      "file": "rlat.dat",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/rlat.dat",
+      "sha256": "22be1e833143f8f9e432ca4de4b796d10157d05e0299ec13ba3127caeb1aa01d"
+    },
+    {
+      "file": "orbital_types.dat",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/orbital_types.dat",
+      "sha256": "520a72bc2f105f51e857867c2e1f435af0c32d10498d92b8a1b940b0130dc43b"
+    },
+    {
+      "file": "site_positions.dat",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/site_positions.dat",
+      "sha256": "cdd74b5232c8d1583027354dcd28ade1090df1fad91638f4e3e5d76e80de2574"
+    },
+    {
+      "file": "lat.dat",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/lat.dat",
+      "sha256": "a036a1a881f4cd346849deb398950305b5ba1289c849f45205336db61dd0457f"
+    },
+    {
+      "file": "element.dat",
+      "source": "data/bilayer_data/carbon_dataset/strain/t-4-0/element.dat",
+      "sha256": "6abac880fffac570469d1e627a2e90ce730a9f807bfa0f7f2b4a1f029f6411b7"
+    },
+    {
+      "file": "hamiltonians_pred.h5",
+      "source": "data/bilayer_data/carbon_eval/strain/output_dir/t-4-0/hamiltonians_pred.h5",
+      "sha256": "2b608574d192e1e42922d129e15a4551f1d885d62477cf6013c2c8a1bfcb45f6"
+    },
+    {
+      "file": "band.json",
+      "source": "bilayer_test/archive_test2/carbon_eval/strain/output_dir/t-2-0/band.json",
+      "sha256": "9db0d3fceb6cce10784d298bd133e0a934e8fc5ad108db8217ad547d743420d6"
+    }
+  ]
+}

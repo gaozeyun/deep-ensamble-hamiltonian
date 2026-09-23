@@ -1,0 +1,34 @@
+[
+  {
+    "model": "model-1",
+    "source": "models/model-1/save_dir/2026-02-04_19-49-41/src/train.ini",
+    "copy": "models/config/model-1.ini",
+    "sha256": "675d06515ee2eedb2c2c214b5942f95b04ebc1f461d4a1be6e622e8f1fd369f6",
+    "seed": 42,
+    "data_order": "original"
+  },
+  {
+    "model": "model-2",
+    "source": "models/model-2/save_dir/2026-02-16_18-42-06/src/train.ini",
+    "copy": "models/config/model-2.ini",
+    "sha256": "17672e9bb89e36681f7134a02e5486a2bdca03c5d765e0ba8771c6f84f8f8c10",
+    "seed": 2026,
+    "data_order": "original"
+  },
+  {
+    "model": "model-3",
+    "source": "models/model-3/save_dir/2026-02-16_18-42-21/src/train.ini",
+    "copy": "models/config/model-3.ini",
+    "sha256": "ec317e750cf7c6a6fa03a8932447fae00ec0e5062f8bccd0246efca6a618df0b",
+    "seed": 42,
+    "data_order": "reversed"
+  },
+  {
+    "model": "model-4",
+    "source": "models/model-4/save_dir/2026-02-16_18-42-28/src/train.ini",
+    "copy": "models/config/model-4.ini",
+    "sha256": "045db66e4064ac44781041f9e91ae775f1f0ccd433fca5bdcd76c284c718a2af",
+    "seed": 2026,
+    "data_order": "reversed"
+  }
+]

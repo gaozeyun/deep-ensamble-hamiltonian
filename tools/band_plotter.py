@@ -119,8 +119,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Hartree to eV conversion
-# Hartree2eV = 27.211386245988
-Hartree2eV = 1.0
+Hartree2eV = 1.0 / 0.036749324533634074
 plt.rcParams['font.family'] = 'Nimbus Roman'
 
 

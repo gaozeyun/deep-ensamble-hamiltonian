@@ -118,7 +118,7 @@ def genlist(x):
 
 def std_out_array(a):
     """Convert array to space-separated string."""
-    return ' '.join(map(str, a.flatten()))
+    return ' '.join(map(str, np.asarray(a).flatten()))
 
 
 def construct_mesh_kpts(nkmesh, offset=None, k1=None, k2=None):

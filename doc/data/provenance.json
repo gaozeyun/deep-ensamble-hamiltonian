@@ -1,0 +1,48 @@
+{
+  "description": "Real archived evaluation outputs; no synthetic predictions.",
+  "source_test_result": "bilayer_data/carbon_eval/strain/output_dir/test_result.h5",
+  "source_test_result_sha256": "d8453a4646304de9503bcc9c3ccccc727eea1ca869a5fcc68990cb91e269f65e",
+  "sample_structure_ids": [
+    "t-0-0",
+    "t-4-0",
+    "t-8-1"
+  ],
+  "sample_fields": [
+    "H_pred",
+    "label",
+    "mask"
+  ],
+  "sample_sha256": "ac1fdbe27a29824d11481f3499c97192c8fe2b3f2fbe16de8171ea7117eb3aaf",
+  "sweeps": [
+    {
+      "copy": "data/bilayer_bond_error_analyze.csv",
+      "source": "bilayer_data/carbon_eval/bond/output_dir/error_analyze.csv",
+      "sha256": "b98c8290b6ddf679c4b9f4730ec18f9cdd12d49cf78f0a7601e901cf309cdfeb"
+    },
+    {
+      "copy": "data/bilayer_d_error_analyze.csv",
+      "source": "bilayer_data/carbon_eval/d/output_dir/error_analyze.csv",
+      "sha256": "cff9ad49e124861935b725b5203c6214ae00085239441bb5589c5291d3cf9f80"
+    },
+    {
+      "copy": "data/bilayer_strain_error_analyze.csv",
+      "source": "bilayer_data/carbon_eval/strain/output_dir/error_analyze.csv",
+      "sha256": "0562e00152cad8465f2697a94410c71efe5ccaacb328668e6317cc0cbf1e6eb8"
+    },
+    {
+      "copy": "data/twisted_bond_error_analyze.csv",
+      "source": "twisted_data/carbon_eval/bond/output_dir/error_analyze.csv",
+      "sha256": "089afbceb0ab92e8966c32ce9a922bd17c8f5b4891c29d83eef06f77dd6a2e6d"
+    },
+    {
+      "copy": "data/twisted_d_error_analyze.csv",
+      "source": "twisted_data/carbon_eval/d/output_dir/error_analyze.csv",
+      "sha256": "255b3520d3554a744eca4c3adff5d4f858ca723ed749f1445e03d7049b5656fa"
+    },
+    {
+      "copy": "data/twisted_strain_error_analyze.csv",
+      "source": "twisted_data/carbon_eval/strain/output_dir/error_analyze.csv",
+      "sha256": "2005dc274104410b0acf878e5f7f8253652ea8d4fe599b6c4f2598f87dbffa40"
+    }
+  ]
+}

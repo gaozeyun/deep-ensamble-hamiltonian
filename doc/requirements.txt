@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+h5py
+nbformat
+nbclient
+ipykernel
+jupyterlab
+scipy
+Pillow

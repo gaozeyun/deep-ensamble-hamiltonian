@@ -1,0 +1,2 @@
+# Preserve the original saved configuration bytes, including whitespace.
+model-*.ini -text -whitespace
